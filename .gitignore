@@ -61,18 +61,6 @@ yarn-error.log*
 Thumbs.db
 desktop.ini
 
-# --- Markdown 文档（本地笔记 / 面试 / 对接说明，不提交）---
-*.md
-!README.md
-# 若连 README 也不想上传，删掉上一行 !README.md 即可
-
-# 面试与 AI 辅助文档（显式列出，便于识别）
-**/面试*.md
-**/面试-*.md
-**/CLAUDE.md
-**/AGENTS.md
-**/FRONTEND_API.md
-**/docs/**/*.md
 
 # --- 旧路径占位（若曾用 frontend 目录名）---
 frontend/node_modules/
