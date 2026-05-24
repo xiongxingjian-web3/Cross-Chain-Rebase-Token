@@ -67,7 +67,7 @@ npm install
 npm run dev
 ```
 
-浏览器访问 [http://localhost:3000](http://localhost:3000)。
+
 
 > 若重新部署合约，请同步更新 `ccip-rebase-token-ui/contracts/constants.ts` 中的合约地址。
 
