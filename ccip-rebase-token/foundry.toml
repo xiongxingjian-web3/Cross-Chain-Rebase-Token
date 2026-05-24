@@ -1,0 +1,31 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+via-ir = true
+optimizer = true
+optimizer_runs = 200
+# chainlink-ccip remappings.target node_modules - auto-remap disabled.
+# Use only these remappings; do NOT add ./remappings.txt — Forge merges it with this array and drops @chainlink/... src/v0.8 remap.
+auto_detect_remappings = false
+remappings = [
+    "@chainlink/contracts/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@chainlink/contracts/src/v0.8/vendor/openzeppelin-solidity/v5.0.2/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@chainlink/contracts/src/v0.8/shared/=lib/chainlink-evm/contracts/src/v0.8/shared/",
+    "@chainlink/contracts/src/v0.8/call/=lib/chainlink-evm/contracts/src/v0.8/call/",
+    "@chainlink/contracts/src/v0.8/=lib/chainlink-evm/contracts/src/v0.8/",
+    "@chainlink/contracts-ccip/contracts/=lib/chainlink-ccip/chains/evm/contracts/",
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "forge-std/=lib/forge-std/src/",
+    "@chainlink-local/=lib/chainlink-local/",
+]
+
+# ZKsync: same solc 0.8.24 as Sepolia; zksolc compiles for zkEVM (artifacts in zkout/)
+[profile.default.zksync]
+zksolc = "1.5.15"
+optimizer = true
+
+[etherscan]
+sepolia = { key = "${SEPOLIA_EXPLORER_API_KEY}" }
+zksync-testnet = { key = "${ZKSYNC_SEPOLIA_EXPLORER_API_KEY}" }

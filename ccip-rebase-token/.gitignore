@@ -1,0 +1,32 @@
+# Foundry 编译与缓存
+cache/
+out/
+zkout/
+lib/
+
+# 部署记录（含钱包地址、交易详情，勿提交）
+broadcast/
+
+# 本地环境变量（含 PRIVATE_KEY、RPC API Key）
+.env
+.env.*
+!.env.example
+
+# 工具链二进制（本地下载）
+foundryup-zksync
+
+# Forge 自动生成的 remappings（由 foundry.toml 管理）
+remappings.txt
+
+# 文档生成
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,81 @@
+# =============================================================================
+# 根目录 .gitignore — 跨链 Rebase Token  monorepo
+# 提交前请确认：git status 中不应出现 .env、私钥、broadcast 等
+# =============================================================================
+
+# --- 敏感信息（切勿提交）---
+.env
+.env.*
+!.env.example
+!ccip-rebase-token/.env.example
+!ccip-rebase-token-ui/.env.example
+*.pem
+*.key
+*.keystore
+**/secrets.json
+**/credentials.json
+**/mnemonic.txt
+**/*_private_key*
+**/*private-key*
+
+# --- Foundry / 合约 (ccip-rebase-token) ---
+ccip-rebase-token/cache/
+ccip-rebase-token/out/
+ccip-rebase-token/zkout/
+ccip-rebase-token/lib/
+ccip-rebase-token/broadcast/
+ccip-rebase-token/foundryup-zksync
+ccip-rebase-token/remappings.txt
+ccip-rebase-token/.env
+
+# --- 前端 (ccip-rebase-token-ui) ---
+ccip-rebase-token-ui/node_modules/
+ccip-rebase-token-ui/.next/
+ccip-rebase-token-ui/out/
+ccip-rebase-token-ui/build/
+ccip-rebase-token-ui/.vercel/
+ccip-rebase-token-ui/.env
+ccip-rebase-token-ui/.env.local
+ccip-rebase-token-ui/.env.*.local
+ccip-rebase-token-ui/coverage/
+ccip-rebase-token-ui/*.tsbuildinfo
+ccip-rebase-token-ui/.pnp
+ccip-rebase-token-ui/.pnp.*
+
+# --- 日志与调试 ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- IDE / 编辑器 ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# --- 系统文件 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Markdown 文档（本地笔记 / 面试 / 对接说明，不提交）---
+*.md
+!README.md
+# 若连 README 也不想上传，删掉上一行 !README.md 即可
+
+# 面试与 AI 辅助文档（显式列出，便于识别）
+**/面试*.md
+**/面试-*.md
+**/CLAUDE.md
+**/AGENTS.md
+**/FRONTEND_API.md
+**/docs/**/*.md
+
+# --- 旧路径占位（若曾用 frontend 目录名）---
+frontend/node_modules/
+frontend/.env
+frontend/dist/
+frontend/build/
